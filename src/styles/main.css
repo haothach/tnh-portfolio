@@ -1694,59 +1694,111 @@ body {
   border-radius: var(--radius-full);
 }
 
-/* RESPONSIVE DESIGN & MOBILE BREAKPOINTS */
+/* RESPONSIVE DESIGN & MOBILE BREAKPOINTS (Comprehensive Mobile Optimization) */
 @media (max-width: 1100px) {
-  .metrics-showcase-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .about-3col-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
+  .about-bento-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .bento-gallery-grid-6,
   .bento-gallery-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .featured-yt-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }
 
 @media (max-width: 900px) {
+  .container,
+  .container-wide,
+  .container-bento-wide,
   .container-fullscreen {
-    padding: 0 16px;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .section-padding {
+    padding: 55px 0 70px;
   }
 
   .hero-welcome-fullscreen {
-    padding: 24px 16px;
+    padding: 24px 20px;
   }
 
   .metrics-showcase-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .about-top-row {
-    flex-direction: column;
+  .about-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .featured-youtube-container {
+    width: 100%;
+  }
+
+  .featured-yt-grid {
+    grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .about-avatar-frame {
-    width: 280px;
-    margin: 0 auto;
+  .featured-yt-card.card-16x9 {
+    height: 320px;
   }
 
-  .about-bottom-row {
+  .featured-yt-card.card-9x16 {
+    height: 480px;
+  }
+
+  .bento-gallery-grid-6,
+  .bento-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .lifestyle-grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
 
-  .bento-gallery-grid {
-    grid-template-columns: 1fr;
+  .lifestyle-image-frame {
+    max-height: 400px;
   }
 }
 
-/* Dedicated Mobile Styling (Smartphones & Tablets) */
+/* Dedicated Mobile Styling (Smartphones & Small Screens) */
 @media (max-width: 768px) {
+  .container,
+  .container-wide,
+  .container-bento-wide,
+  .container-fullscreen {
+    padding: 0 16px;
+  }
+
+  .section-padding {
+    padding: 45px 0 60px;
+  }
+
+  /* Welcome Hero Header Mobile */
   .welcome-subtitle-cursive {
-    font-size: clamp(1.4rem, 5vw, 2rem);
+    font-size: clamp(1.4rem, 5.5vw, 2rem);
     margin-bottom: -4px;
   }
 
   .portfolio-title-wrapper {
-    padding: 10px 12px;
+    padding: 8px 10px;
   }
 
   .portfolio-main-title {
@@ -1756,6 +1808,160 @@ body {
 
   .portfolio-watermark-script {
     font-size: clamp(2.8rem, 13vw, 5rem);
+  }
+
+  /* Bento Cards Mobile Padding */
+  .bento-metric-card {
+    padding: 22px 20px;
+    min-height: auto;
+  }
+
+  .bento-bg-watermark {
+    font-size: 4rem;
+    right: -4px;
+    bottom: -10px;
+  }
+
+  .about-sidebar-card,
+  .about-col-card,
+  .about-bento-card {
+    padding: 20px 18px;
+    border-radius: 16px;
+  }
+
+  .sidebar-greeting-title {
+    font-size: 1.75rem;
+  }
+
+  .tools-pure-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 10px;
+  }
+
+  .tool-img-logo {
+    width: 52px;
+    height: 52px;
+    padding: 6px;
+    border-radius: 12px;
+  }
+
+  .tool-name-label {
+    font-size: 0.72rem;
+  }
+
+  /* Experience Cards Mobile */
+  .exp-card {
+    padding: 22px 20px;
+  }
+
+  .exp-role-title {
+    font-size: 1.15rem;
+  }
+
+  .exp-period-pill {
+    padding: 4px 12px;
+    font-size: 0.78rem;
+  }
+
+  /* Featured YouTube Showcase Mobile */
+  .featured-yt-card.card-16x9 {
+    height: 250px;
+  }
+
+  .featured-yt-card.card-9x16 {
+    height: 420px;
+  }
+
+  .yt-badge-tag {
+    font-size: 0.68rem;
+    padding: 4px 10px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .bento-overlay {
+    padding: 14px 12px;
+  }
+
+  .bento-item-title {
+    font-size: 0.8rem;
+  }
+
+  .bento-btn {
+    padding: 5px 12px;
+    font-size: 0.64rem;
+  }
+
+  /* Lifestyle Mobile */
+  .lifestyle-heading {
+    font-size: 1.35rem;
+  }
+
+  .lifestyle-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .lifestyle-pills-row {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .lifestyle-pill {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+
+  .lifestyle-image-frame {
+    max-height: 340px;
+    border-radius: 16px;
+  }
+
+  /* Floating Help Widget Mobile */
+  .floating-widget {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .widget-popover {
+    right: 0;
+    width: 220px;
+  }
+
+  /* Lightbox Modal Mobile */
+  .video-modal-overlay {
+    padding: 12px;
+  }
+
+  .video-modal-container {
+    border-radius: 14px;
+  }
+
+  .video-modal-info {
+    padding: 14px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .modal-video-title {
+    font-size: 1rem;
+  }
+
+  /* Transcript Modal Mobile */
+  .transcript-modal-header {
+    padding: 18px 20px 14px;
+  }
+
+  .transcript-modal-body {
+    padding: 16px 18px;
+    gap: 20px;
+  }
+
+  .transcript-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
 
@@ -1770,12 +1976,54 @@ body {
   }
 
   .portfolio-main-title {
-    font-size: clamp(1.4rem, 8vw, 2.2rem);
-    letter-spacing: 0.04em;
+    font-size: clamp(1.4rem, 7.8vw, 2.2rem);
+    letter-spacing: 0.03em;
   }
 
   .portfolio-watermark-script {
-    font-size: clamp(2.2rem, 12vw, 3.8rem);
+    font-size: clamp(2.2rem, 11vw, 3.8rem);
+  }
+
+  .bento-stat-hero {
+    font-size: 2.2rem;
+  }
+
+  .yt-dual-stat-row {
+    gap: 8px;
+  }
+
+  .yt-num {
+    font-size: 1.35rem;
+  }
+
+  .yt-lbl {
+    font-size: 0.6rem;
+  }
+
+  .featured-yt-card.card-16x9 {
+    height: 210px;
+  }
+
+  .featured-yt-card.card-9x16 {
+    height: 380px;
+  }
+
+  .tools-pure-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 6px;
+  }
+
+  .tool-img-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .tool-name-label {
+    font-size: 0.68rem;
+  }
+
+  .lifestyle-image-frame {
+    max-height: 280px;
   }
 }
 
